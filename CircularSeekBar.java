@@ -3,8 +3,9 @@
  * @version 1
  * @date 26 January, 2013
  */
-package com.appaholics.circularseekbar;
+package de.ips.main.view.component;
 
+import de.ips.mobile.R;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -227,8 +228,8 @@ public class CircularSeekBar extends View {
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-		width = getWidth(); // Get View Width
-		height = getHeight();// Get View Height
+		width = View.MeasureSpec.getSize(widthMeasureSpec);
+	    height = View.MeasureSpec.getSize(heightMeasureSpec);
 
 		int size = (width > height) ? height : width; // Choose the smaller
 		// between width and
